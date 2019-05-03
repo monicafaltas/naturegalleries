@@ -1,0 +1,41 @@
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 100px;
+
+
+
+  &__item {
+
+    width: calc(20% - 12px);
+    background-color: var(--primary-color);
+    margin-bottom: 13px;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+    filter: invert(100%);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    @include tablet {
+      width: calc(50% - 6px);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &:hover{
+      filter: grayscale(0);
+      background-size: 102%;
+    }
+
+    div {
+      padding-bottom: 56.25%;
+
+    }
+
+  }
+
+}
